@@ -22,11 +22,6 @@ pipeline {
     }
 
     post {
-        always {
-            echo 'Cleaning up...'
-            // Optionally clean up images
-            sh 'docker rmi edulog:latest || true'
-        }
         success {
             echo 'Pipeline succeeded!'
         }
